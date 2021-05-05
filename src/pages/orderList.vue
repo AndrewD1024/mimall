@@ -1,9 +1,9 @@
 <template>
-  <div>detail</div>
+  <div>orderList</div>
 </template>
 
 <script>
 export default {
-  name: "detail", // 组件名称
+  name: "order-list", // 组件名称
 };
 </script>

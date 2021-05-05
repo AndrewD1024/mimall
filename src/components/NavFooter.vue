@@ -1,7 +1,7 @@
 // 首页底部导航栏组件
 
 <template>
-  <div></div>
+  <div>nav-header</div>
 </template>
 
 <script>
