@@ -1,3 +1,5 @@
+// home.vue是所有页面都存在的组件
+
 <template>
   <div>
     <nav-header></nav-header>
