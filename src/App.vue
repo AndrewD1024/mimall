@@ -18,4 +18,7 @@ export default {
 <style>
 /* 导入scss文件 */
 @import "./assets/scss/reset.scss";
+/* @import "./assets/scss/config.scss"; */
+
+@import "./assets/scss/button.scss";
 </style>

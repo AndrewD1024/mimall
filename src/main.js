@@ -31,6 +31,6 @@ Vue.use(VueAxios, axios);
 Vue.config.productionTip = false
 
 new Vue({
-  router,
+  router, // 使用router
   render: h => h(App),
 }).$mount('#app')

@@ -1,7 +1,10 @@
+// 未使用路由懒加载, 因此模块直接使用import 导入
+// 如果使用路由懒加载,是这种形式 const Index = () => import('./pages/index')
+// 
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './pages/home'
-// import Login from './pages/login'
+import Login from './pages/login'
 import Index from './pages/index'
 import Product from './pages/product'
 import Detail from './pages/detail'
@@ -12,6 +15,9 @@ import OrderList from './pages/orderList'
 import OrderPay from './pages/orderPay'
 import AliPay from './pages/alipay'
 
+
+
+// 1. 通过Vue.use(插件)安装插件
 Vue.use(Router);
 
 export default new Router({
@@ -19,8 +25,8 @@ export default new Router({
         {
             path: '/', // 根路由
             name: 'home',
-            component: Home,
-            redirect: '/index',
+            component: Home, // 设定不同路由对应的组件
+            redirect: '/index', // 设置根路径重定向到/index，默认访问/index
             children: [ // 子路由
                 {
                     path: '/index',
@@ -38,6 +44,11 @@ export default new Router({
             ]
         },
         {
+            path: '/login',
+            name: 'login',
+            component: Login
+        },
+        {
             path: '/cart',
             name: 'cart',
             component: Cart
@@ -46,9 +57,9 @@ export default new Router({
             path: '/order',
             name: 'order',
             component: Order,
-            children: [
+            children: [ // 子路由
                 {
-                    path: 'list',
+                    path: 'list', // 路径不加'/'
                     name: 'order-list',
                     component: OrderList,
                 },
@@ -69,5 +80,6 @@ export default new Router({
                 }
             ]
         },
-    ]
+    ],
+    // mode: 'history'
 })

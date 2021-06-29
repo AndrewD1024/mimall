@@ -3,3 +3,13 @@
   margin-right: auto;
   margin-left: auto; // 左右margin auto保证居中
 }
+
+// 设置a中的图片均为宽高完全铺开
+a {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// 此处的样式似乎会自动应用到.vue组件中，而无需在组件中引用
